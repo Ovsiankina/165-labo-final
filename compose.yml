@@ -1,0 +1,22 @@
+services:
+  mongodb-165-labo:
+    build: .
+    container_name: mongodb-165-labo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodata-165-labo:/data/db
+
+  
+  flask-165-labo:
+    build:
+      context: ./rendu/python_flask
+    container_name: flask-165-labo
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongodb-165-labo
+    restart: always
+
+volumes:
+  mongodata-165-labo:
