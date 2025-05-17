@@ -8,11 +8,7 @@
 set -e
 
 # 1. Launch mongod in the background so we can restore into it
-mongod \
-  --dbpath /data/db \
-  --bind_ip_all \
-  --fork \
-  --logpath /var/log/mongod-init.log
+mongod --dbpath /data/db --bind_ip_all --fork --logpath /var/log/mongod-init.log
 
 # 2. Restore all databases from /dump, dropping existing data
 if [ -d /dump ]; then
