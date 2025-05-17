@@ -8,10 +8,8 @@ if [ -d /dump ]; then
 else
   echo "==> No /dump directory found; skipping restore"
 fi
-
 # 3. Shut down the init mongod
 mongod --dbpath /data/db --shutdown
 echo "==> Initial restore complete."
-
 # 4. Exec the real mongod (so Docker receives signals correctly)
 exec mongod --auth --bind_ip_all
