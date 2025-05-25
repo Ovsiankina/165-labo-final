@@ -65,3 +65,8 @@ facilité.
 
 Le code de l'application se trouve dans 
 [./rendu/python_flask/](./rendu/python_flask/)
+
+Le `README.md` se trouve dans le root du projet.
+
+Le backend mongodb est un container docker dans lequel on importe les données
+contenues dans [./rendu/data/backup/](./rendu/data/backup/)
