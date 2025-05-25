@@ -34,15 +34,15 @@ facilité.
 ### Questions :
 1. Afficher les noms des BD disponibles dans le serveur
 
-![show dbs](./rendu/images/show-dbs.png) 
+    ![show dbs](./rendu/images/show-dbs.png) 
 
 2. Afficher les noms des collections dans my_data
 
-![show collections](./rendu/images/show-collections.png) 
+    ![show collections](./rendu/images/show-collections.png) 
 
 3. Compter le nombre des documents de chaque collection
 
-![count cards](./rendu/images/count-cards.png) 
+     ![count cards](./rendu/images/count-cards.png) 
 
 ## Rendre une sauvegarde du serveur et le mot de passe pour chaques utilisateurs:
 
