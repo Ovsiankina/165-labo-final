@@ -70,3 +70,11 @@ Le `README.md` se trouve dans le root du projet.
 
 Le backend mongodb est un container docker dans lequel on importe les données
 contenues dans [./rendu/data/backup/](./rendu/data/backup/)
+
+## Instructions d'utilistation
+
+1. Lancez le container docker avec Docker Compose dans le root du projet.
+```bash
+# Dans le root du projet
+docker compose up
+```
