@@ -1,8 +1,25 @@
-# Rendu du Labo 165 - NoSQL
+# Documentation du Labo 165 - NoSQL
 
-## lien d'origine des données téléchargées + description des données + fichier JSON avec les données originales
+Cette documentation contient l'entier du rendu écrit.
+Ce markdown contient également des images, pour les visualiser vous avez 3
+options:
 
-#### Lien d'origine des données opendata
+1. Utilisez votre markdown renderer favoris
+2. Rendez vous sur le github du projet [GitHub labo 165](https://github.com/Ovsiankina/165-labo-final/tree/main)
+3. Lisez le pré-rendu PDF trouvable dans le root du zip du projet
+
+## Checklist: 
+
+- [x] lien d'origine des données téléchargées + description des données + fichier JSON avec les données originales
+- [x] Exportation de ces collections en tant que JSON
+- [x] Pour chacune des questions suivantes : la commande mongosh à utiliser pour répondre à la question + le résultat d'exécution de la commande
+- [x] Rendre une sauvegarde du serveur et le mot de passe pour chaques utilisateurs:
+- [x] Le code de l’application + Read-me avec instructions d’utilisation et de déploiement,
+- [x] Instructions d'utilistation
+
+## Lien d'origine des données téléchargées + description des données + fichier JSON avec les données originales
+
+### Lien d'origine des données opendata
 
 **Site web de la collection**
 [Site MTG json](https://mtgjson.com/)
@@ -10,7 +27,7 @@
 **Deck de cartes choisi (Set "Adventures in the Forgotten Realms" abrv. "AFR")**
 [Set AFR (Adventures of the Forgotten Realms)](https://mtgjson.com/api/v5/AFR.json)
 
-#### Description
+### Description
 
 Une liste exhaustive de toutes les cartes de la série "Adventures of the Forgotten Realms".
 Une collaboration unique entre "Magic The Gathering" et "Dungeons and Dragons".
@@ -20,7 +37,7 @@ The Gathering. Elle permet de comparer les cartes et construire ses propres
 mains (set de cartes choisies pour jouer contre un adversaire) avec grande
 facilité.
 
-#### Fichier des données originales
+### Fichier des données originales
 [AFR.json](./data/AFR.json)
 
 ## Exportation de ces collections en tant que JSON
@@ -71,13 +88,17 @@ Le `README.md` se trouve dans le root du projet.
 Le backend mongodb est un container docker dans lequel on importe les données
 contenues dans [./rendu/data/backup/](./rendu/data/backup/)
 
-## Instructions d'utilistation
+### Instructions d'utilistation
 
 1. Lancez le container docker avec Docker Compose dans le root du projet.
     ```bash
     # Dans le root du projet
-    docker compose up
+    docker compose up # Cela peut prendre quelques minutes ...
     ```
+2. Dès que l'application est démarrée:
+    Rendez-vous dans un browser à l'adresse `http://127.0.0.1:5000/`.
+    Testez l'application en utilisant `CTRL+r` pour refresh la page.
+    Les données devraient changer pour une autre carte choisie aléatoirement.
 
 ### Debug
 
