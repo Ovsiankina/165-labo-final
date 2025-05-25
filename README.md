@@ -78,3 +78,32 @@ contenues dans [./rendu/data/backup/](./rendu/data/backup/)
 # Dans le root du projet
 docker compose up
 ```
+
+### Debug
+
+1. Collision de container ou de nom d'image
+    Si vous suspectez une collision de container, utilisez cette commande pour
+    supprimer tout les containers, toutes les images et tout les volumes docker
+    actuellement sur votre système.
+    
+    > [!WARNING]
+    > Cela supprime TOUT. Cela inclu les projets des autres ainsi que les vôtres !
+    > Cette action est iréverssible !
+    
+    ```bash
+    docker rm $(docker ps -aq) && \
+    docker rmi -f $(docker images -aq) && \
+    docker volume rm --force $(docker volume ls -q)
+    ```
+2. Problème lors du git clone de `entrypoint.sh`
+
+    Si vous utilisez le code inclus dans le zip, ce problème n'est en théorie
+    pas possible.
+
+    Si vous avez cloné depuis github ce projet sur Windows 10/11, il se peut
+    que `entrypoint.sh` ait une ligne vide ajoutée qui pose problème lors de la
+    copie du code dans le container mongodb.
+
+    ![Image de l'erreur sur Win11](./rendu/images/line16-err.png)
+    
+    ![Image line16 sur vscode Win11](./rendu/images/vscode-l16-err.jpg)
