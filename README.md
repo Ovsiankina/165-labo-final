@@ -86,15 +86,16 @@ contenues dans [./rendu/data/backup/](./rendu/data/backup/)
     supprimer tout les containers, toutes les images et tout les volumes docker
     actuellement sur votre système.
     
-    > [!WARNING]
-    > Cela supprime TOUT. Cela inclu les projets des autres ainsi que les vôtres !
-    > Cette action est iréverssible !
     
     ```bash
     docker rm $(docker ps -aq) && \
     docker rmi -f $(docker images -aq) && \
     docker volume rm --force $(docker volume ls -q)
     ```
+> [!WARNING]
+> Cela supprime TOUT. Cela inclu les projets des autres ainsi que les vôtres !
+> Cette action est iréverssible !
+
 2. Problème lors du git clone de `entrypoint.sh`
 
     Si vous utilisez le code inclus dans le zip, ce problème n'est en théorie
